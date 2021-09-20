@@ -1,9 +1,43 @@
 * {
     /* height & width now includes border & padding */
     box-sizing: border-box;
+    border: 1px dotted lightsteelblue;
+    /* temp border to help me see boxes */
   }
   
   body {
     margin: 0;
-    font-family: Helvetica;
+    font-family: Helvetica, cursive;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
+
+  header, footer {
+    display: flex;
+    align-items: center;
+    /*aligns contents and side of tem*/
+    height: 3.125rem;
+    /*root element for most screens are 16 px. divide your pixels by 16 and use that number as rem*/
+  }
+
+  header {
+    background-color: gray;
+    color: white;
+    box-shadow: 1px 1px 3px 1px lightgray;
+    padding-left: 1rem;
+  }
+
+  main {
+    flex-grow: 1;
+    /*gives it the highest priority grow property; takes up all available space. so it pushes up the header and pushes down the footer, so the footer sticks to the bottom!*/
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 1rem;
+    /*border-radius: 7px - gives boxes a bit of a curve*/
+
+    height: 9.375rem;
+  }
+
+p id=
