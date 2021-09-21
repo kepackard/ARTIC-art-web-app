@@ -38,14 +38,17 @@ $(function(){
 // Grabbing data from the api
     function getArtData(event) {
         event.preventDefault();
-        const artTitle = $input.val();
+        // Resets search field to an empty string each time. ok to comment-out
+        // const artTitle = $input.val();
          $input.val("");
     
-        $.ajax(`${BASE_URL}/artworks/search?q=${artTitle}`).then(function(data) {
-          artData = data;
-        //save the data locally
-          console.log(artData.data[0]);
+         $.ajax(`${BASE_URL}/artworks/?fields=title,artist_display,date_display,medium_display`).then(function(results) {
+          artData = results.data;
+          console.log("Ajax Call", artData);
 
+        // //save the data locally
+        //   console.log(artData.data[0]);
+    
         render ();
         //transfer data to the DOM
     }, function(error) {
@@ -53,25 +56,29 @@ $(function(){
     });
 }
 
-   //we need to generate html for each object inside of artData
-    //we need to set the html content to the html we generate
-
-
 // Access values inside api object
 function render() {
-    $title.text(artData.data[0].title);
-    $artist.text(artData.artist_title);
-    $date.text(artData.date_display);
-    $medium.text(artData.medium_display);
+    const htmlContainer = artData.map((art) => { 
+        $title.text(art.title);
+        $artist.text(art.artist_title);
+        $date.text(art.date_display);
+        $medium.text(art.medium_display);
 
-    // console.log($title.text);
+//    console.log(artData.data.medium_display);
+    });
+
 }
 
 // If there is more than one result, pull only the first one
 // https://api.artic.edu/api/v1/artworks?limit=2
 
-// How to pull and display image
+// How to pull and display image??
 
-// If the image is not in the public domain, pull the next one that is
+// "data": {
+//     "id": 6565,
+//     "title": "American Gothic",
+//     "image_id": ""
+
+// If the image is not in the public domain, pull the next one that is ??
 
 });
