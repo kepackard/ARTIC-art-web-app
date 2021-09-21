@@ -44,7 +44,7 @@ $(function(){
         $.ajax(`${BASE_URL}/artworks/search?q=${artTitle}`).then(function(data) {
           artData = data;
         //save the data locally
-          console.log(artData);
+          console.log(artData.data[0]);
 
         render ();
         //transfer data to the DOM
@@ -59,7 +59,7 @@ $(function(){
 
 // Access values inside api object
 function render() {
-    $title.text(artData.title);
+    $title.text(artData.data[0].title);
     $artist.text(artData.artist_title);
     $date.text(artData.date_display);
     $medium.text(artData.medium_display);
@@ -72,6 +72,6 @@ function render() {
 
 // How to pull and display image
 
-// If the image is not in the public display, pull the next one that is
+// If the image is not in the public domain, pull the next one that is
 
 });

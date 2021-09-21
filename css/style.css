@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    border: 1px solid grey;
   }
 
   header, footer {
@@ -22,10 +23,10 @@
   }
 
   header {
-    background-color: gray;
+    /* background-color: gray;
     color: white;
     box-shadow: 1px 1px 3px 1px lightgray;
-    padding-left: 1rem;
+    padding-left: 1rem; */
   }
 
   main {
@@ -35,9 +36,16 @@
     flex-wrap: wrap;
     padding: 1rem;
     margin: 1rem;
-    /*border-radius: 7px - gives boxes a bit of a curve*/
+    border-radius: 20px 
+    /* - gives boxes a bit of a curve */
 
-    height: 9.375rem;
+    height: 25rem;
   }
 
-p id=
+#title {
+  color: red;
+}
+
+#Image {
+
+}
