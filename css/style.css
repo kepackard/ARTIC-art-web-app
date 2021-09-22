@@ -35,21 +35,26 @@ div.h1 {
   font-family: 'Gideon Roman', cursive;
   background-color: rgb(88,37,37);
   justify-content: center;
-  height: 20%;
+  align-items: center;
+  height: 100%;
   width: 100%;
+  margin: 0;
  }
 
  div.h6 {
   display: flex;
+  height: 100%;
   color: rgb(243, 243, 227);
   font-family:Verdana, sans-serif;
   background-color: rgb(155,51,33);
   justify-content: center;
-   
-  }
+  margin: 0;
+}
+
 form {
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 
 .button {
@@ -59,7 +64,5 @@ form {
 
 footer {
   display: flex;
-  align-items: center;
-  height: 3.125rem;
   justify-content: center;
 }
