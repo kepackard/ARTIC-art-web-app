@@ -4,35 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARTIC Art Web App</title>
+    <title>Still-Life with Data and String</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
+    
     <script defer src="./js/script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
-    <h1>🖼️ Art Institute of Chicago 🖼️</h1>
+    <div class="h1">
+        <h1>Still-Life with Data and String</h1>
+    </div>
     
+    <div class="h6">
+        <h6>5000 years of art and creativity, at your fingertips.</h6>
+    </div>
+
     <form>
         <input type="text" placeholder="Keyword Search"/>
-        <input type="submit" value="Go"/>
+        <input type="button" class="button" value="Go"/>
     </form>
       
       <main>
         <div class="title">
-            <p>Title:</p>
+            <p><strong>Title:</strong></p>
             <p id="Title"></p>
         </div>
-        <div>
-            <p>Artist:</p>
+        <div class="artist">
+            <p><strong>Artist:</strong></p>
             <p id="Artist"></p>
         </div>
-        <div>
-            <p>Date:</p>
+        <div class="date">
+            <p><strong>Date:</strong></p>
             <p id="Date"></p>
         </div>
-        <div>   
-            <p>Medium:</p>
+        <div class="medium">   
+            <p><strong>Medium:</strong></p>
             <p id="Medium"></p>
         </div>
         <!-- <p id="Image"><img src="https://imagehere.jpg" alt=</p> -->
@@ -40,7 +51,5 @@
         
 </body>
 
-<footer>
-    <p>Copyright &copy; <span id='year'></span></p>
-</footer>
+<footer>Copyright &copy; 2021.</footer>
 </html>

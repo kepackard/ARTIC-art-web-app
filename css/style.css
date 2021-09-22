@@ -1,51 +1,66 @@
-* {
-    /* height & width now includes border & padding */
-    box-sizing: border-box;
-    border: 1px dotted lightsteelblue;
-    /* temp border to help me see boxes */
-  }
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+
+{
+  /* height & width now includes border & padding */
+  box-sizing: border-box;
+  border: 1px dotted lightsteelblue;
+  /* temp border to help me see boxes */
+}
   
-  body {
-    margin: 0;
-    font-family: Helvetica, cursive;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    border: 1px solid grey;
-  }
-
-  header, footer {
-    display: flex;
-    align-items: center;
-    /*aligns contents and side of tem*/
-    height: 3.125rem;
-    /*root element for most screens are 16 px. divide your pixels by 16 and use that number as rem*/
-  }
-
-  header {
-    /* background-color: gray;
-    color: white;
-    box-shadow: 1px 1px 3px 1px lightgray;
-    padding-left: 1rem; */
-  }
-
-  main {
-    flex-grow: 1;
-    /*gives it the highest priority grow property; takes up all available space. so it pushes up the header and pushes down the footer, so the footer sticks to the bottom!*/
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 20px 
-    /* - gives boxes a bit of a curve */
-
-    height: 25rem;
-  }
-
-#title {
-  color: red;
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  border: 1px dotted blue;
+  color: rgb(75,69,69);
+  background-color: rgb(243,243,227); 
 }
 
-#Image {
+main {
 
+}
+
+.title, .artist, .date, .medium {
+  display: flex; 
+  justify-content: flex-start;
+  align-items: center;
+  border: solid 1px grey;
+  padding: 10px;
+  background-color: rgb(243, 243, 227);
+}
+ 
+div.h1 {
+  display: flex;
+  color: rgb(243, 243, 227);
+  font-family: 'Gideon Roman', cursive;
+  background-color: rgb(88,37,37);
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+ }
+
+ div.h6 {
+  display: flex;
+  color: rgb(243, 243, 227);
+  font-family:Verdana, sans-serif;
+  background-color: rgb(155,51,33);
+  justify-content: center;
+   
+  }
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background-color: rgb(98, 196, 98);
+  color: white;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  height: 3.125rem;
+  justify-content: center;
 }

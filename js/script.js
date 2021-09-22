@@ -24,7 +24,7 @@ $(function(){
  
 // EVENT LISTENER
 
-    $('form').on('submit', getArtData);
+    $('form').on('click', getArtData);
 
 // FUNCTIONS
 
@@ -60,7 +60,7 @@ $(function(){
 function render() {
     const htmlContainer = artData.map((art) => { 
         $title.text(art.title);
-        $artist.text(art.artist_title);
+        $artist.text(art.artist_display);
         $date.text(art.date_display);
         $medium.text(art.medium_display);
 
