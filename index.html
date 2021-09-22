@@ -15,18 +15,27 @@
     <script defer src="./js/script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
-<body>
+
+<header>
     <div class="h1">
-        <h1>Still-Life with Data and String</h1>
+        <h1>STILL-LIFE WITH DATA AND STRING</h1>
     </div>
+</header>
+
+<body>
+    
     
     <div class="h6">
-        <h6>5000 years of art and creativity, at your fingertips.</h6>
+        <h6>A keyword search engine of the Art Institute of Chicago's collection. 5000 years of art, at your fingertips.</h6>
     </div>
 
     <form>
         <input type="text" placeholder="Keyword Search"/>
-        <input type="button" class="button" value="Go"/>
+       <button class="button" 
+           type="submit">
+           Go
+       </button>
+       
     </form>
       
       <main>
@@ -51,5 +60,10 @@
         
 </body>
 
-<footer>Copyright &copy; 2021.</footer>
+<footer>
+    <p>Copyright &copy; Art Institute of Chicago 
+        <span id="year"></span>
+    </p>
+</footer>
+
 </html>

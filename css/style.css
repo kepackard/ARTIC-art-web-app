@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
 
-{
+* {
   /* height & width now includes border & padding */
   box-sizing: border-box;
-  border: 1px dotted lightsteelblue;
-  /* temp border to help me see boxes */
+ /* temp border to help me see boxes */
 }
   
 body {
