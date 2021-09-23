@@ -16,54 +16,49 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 
-<header>
-    <div class="h1">
-        <h1>STILL-LIFE WITH DATA AND STRING</h1>
-    </div>
-</header>
-
-<body>
-    
-    
-    <div class="h6">
-        <h6>A keyword search engine of the Art Institute of Chicago's collection. 5000 years of art, at your fingertips.</h6>
-    </div>
-
-    <form>
-        <input type="text" placeholder="Keyword Search"/>
-       <button class="button" 
-           type="submit">
-           Go
-       </button>
-       
-    </form>
-      
-      <main>
-        <div class="title">
-            <p><strong>Title:</strong></p>
-            <p id="Title"></p>
+<div class="flex-wrapper">
+    <header>
+        <div class="h1">
+            <h1>STILL-LIFE WITH DATA AND STRING</h1>
         </div>
-        <div class="artist">
-            <p><strong>Artist:</strong></p>
-            <p id="Artist"></p>
+    </header>
+    <body>
+        <div class="h6">
+            <h6>A search engine of the Art Institute of Chicago's collection. 5000 years of art, at your fingertips.</h6>
         </div>
-        <div class="date">
-            <p><strong>Date:</strong></p>
-            <p id="Date"></p>
-        </div>
-        <div class="medium">   
-            <p><strong>Medium:</strong></p>
-            <p id="Medium"></p>
-        </div>
-        <!-- <p id="Image"><img src="https://imagehere.jpg" alt=</p> -->
-    </main>
-        
-</body>
-
-<footer>
-    <p>Copyright &copy; Art Institute of Chicago 
-        <span id="year"></span>
-    </p>
-</footer>
-
+        <form>
+            <input type="text" placeholder="Keyword Search"/>
+                <button class="button" 
+                type="submit">
+                Go
+                </button>
+                </form>
+        <main>
+            <div class="title">
+                <p><strong>Title:</strong></p>
+                <p id="Title"></p>
+            </div>
+            <div class="artist">
+                <p><strong>Artist:</strong></p>
+                <p id="Artist"></p>
+            </div>
+            <div class="date">
+                <p><strong>Date:</strong></p>
+                <p id="Date"></p>
+            </div>
+            <div class="medium">   
+                <p><strong>Medium:</strong></p>
+                <p id="Medium"></p>
+            </div>
+            <div id ="image">
+                <img src="image-file-name.png"/>
+            </div>
+        </main> 
+    </body>
+    <footer>
+        <p>Copyright &copy; Art Institute of Chicago. 
+            <span id="year"></span>
+        </p>
+    </footer>
+</div>
 </html>

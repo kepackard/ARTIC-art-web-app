@@ -1,8 +1,3 @@
-// alert('JS file loaded!')
-
-// curl 'https://api.artic.edu/api/v1/artworks/24645' \
-// --header 'AIC-User-Agent: aic-bash (kepackard@gmail.com)'
-
 // IPO - INPUT -> PROCESS -> OUTPUT
 
 $(function(){
@@ -10,8 +5,9 @@ $(function(){
     // API DETAILS
 
     const BASE_URL = 'https://api.artic.edu/api/v1'; 
+    const baseUrlImage = 'https://www.artic.edu/iiif/2';
 
-// VARIABLES AND CONSTANTS
+    // VARIABLES AND CONSTANTS
 
     let artData;
 
@@ -21,7 +17,8 @@ $(function(){
     const $medium = $('#Medium');
     const $form = $('form');
     const $input = $('input[type="text"]');
-    // const $image = $('IMAGE HERE')
+    
+    let $image = $('#Image');
  
 // EVENT LISTENER
 
@@ -43,47 +40,43 @@ $(function(){
          $input.val("");
     
          $.ajax(`${BASE_URL}/artworks/search?q=${artTitle}&fields=title,artist_title,date_display,medium_display,image_id`).then(function(results) {
-          console.log(results);
-          
+        //   console.log(results);
+        
           artData = results.data;
           console.log("Ajax Call", artData);
 
-     
-        render ();
-        //transfer data to the DOM
+        const imageId = artData[0].image_id;
+        // grabbing imageId and saving it as variable
+        
+        // invoking getImage function and passing in imageID
+        getImage(imageId);
+
+        render (); 
     }, function(error) {
         console.log("Error", error);
     });
 }
 
-// Access values inside api object
+// Access values inside api object...
 function render() {
     $title.text(artData[0].title);
     $artist.text(artData[0].artist_title);
     $date.text(artData[0].date_display);
     $medium.text(artData[0].medium_display);
-
-//    console.log(artData.data.medium_display);
+    $image.text((artData[0].image_id);//look at what other options for displaying photo, or append image//
+    look into - append image html tags. 
     };
 
+function getImage(imageId) {
+        $.ajax(`${baseUrlImage}/${imageId}/full/843,/0/default.jpg`)
+        .then(function(picture) {console.log(picture)})
+        console.log("This works");
+    }
+    
+});
 
-// If there is more than one result, pull only the first one
-// https://api.artic.edu/api/v1/artworks?limit=2
-
-// How to pull and display image??
-
-// "data": {
-//     "id": 6565,
-//     "title": "American Gothic",
-//     "image_id": ""
-
-// https://www.artic.edu/iiif/2",
+/// you can write the funciton outsie but invoke it inside the function.
 
 // If the image is not in the public domain, pull the next one that is ??
 
-});
-
-
-// $.ajax(`${BASE_URL}/artworks/?fields=title,artist_title,date_display,medium_display`).then(function(results) {
-    // artData = results.data;
-    // console.log("Ajax Call", artData);
+link source - do I use image tag or other
