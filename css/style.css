@@ -26,8 +26,8 @@ body {
   align-items: center;
   border: solid 1px grey;
   background-color: white;
-  padding: 5px;
-  margin: 2px 0px 0px 1px;
+  padding: 1px 1px 1px 1px;
+  margin: 1px;
 }
  
 div.h1 {
@@ -71,19 +71,20 @@ footer {
 }
 
 #Title {
-  padding: 5px 5px 5px 5px;
+  padding: 0px 0px 0px 6px;
+  font-style: italic;
 }
 
 #Artist {
-  padding: 5px 5px 5px 5px;
+  padding: 0px 0px 0px 6px;
 }
 
 #Date {
-  padding: 5px 5px 5px 5px;
+  padding: 0px 0px 0px 6px;
 }
 
 #Medium {
-  padding: 5px 5px 5px 5px;
+  padding: 0px 0px 0px 6px;
 }
 
 div.image-box {
