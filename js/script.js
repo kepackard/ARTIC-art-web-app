@@ -63,7 +63,7 @@ function render() {
     $date.text(artData[0].date_display);
     $medium.text(artData[0].medium_display);
     let imageId = artData[0].image_id;
-    $image.attr('src',`https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg/`);
+    $image.attr('src',`https://www.artic.edu/iiif/2/${imageId}/full/550,/0/default.jpg/`);
     };
 
 });
