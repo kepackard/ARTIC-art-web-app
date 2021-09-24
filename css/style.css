@@ -26,8 +26,8 @@ body {
   align-items: center;
   border: solid 1px grey;
   background-color: white;
-  padding: 10px;
-  
+  padding: 5px;
+  margin: 2px 0px 0px 1px;
 }
  
 div.h1 {
@@ -67,4 +67,29 @@ form {
 footer {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+#Title {
+  padding: 5px 5px 5px 5px;
+}
+
+#Artist {
+  padding: 5px 5px 5px 5px;
+}
+
+#Date {
+  padding: 5px 5px 5px 5px;
+}
+
+#Medium {
+  padding: 5px 5px 5px 5px;
+}
+
+div.image-box {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
 }

@@ -5,7 +5,7 @@ $(function(){
     // API DETAILS
 
     const BASE_URL = 'https://api.artic.edu/api/v1'; 
-    const baseUrlImage = 'https://www.artic.edu/iiif/2';
+    // const baseUrlImage = 'https://www.artic.edu/iiif/2';
 
     // VARIABLES AND CONSTANTS
 
@@ -17,8 +17,7 @@ $(function(){
     const $medium = $('#Medium');
     const $form = $('form');
     const $input = $('input[type="text"]');
-    
-    let $image = $('#Image');
+    let $image = $('img');
  
 // EVENT LISTENER
 
@@ -43,13 +42,13 @@ $(function(){
         //   console.log(results);
         
           artData = results.data;
-          console.log("Ajax Call", artData);
+        //   console.log("Ajax Call", artData);
 
         const imageId = artData[0].image_id;
         // grabbing imageId and saving it as variable
         
         // invoking getImage function and passing in imageID
-        getImage(imageId);
+        // getImage(imageId);
 
         render (); 
     }, function(error) {
@@ -63,20 +62,22 @@ function render() {
     $artist.text(artData[0].artist_title);
     $date.text(artData[0].date_display);
     $medium.text(artData[0].medium_display);
-    $image.text((artData[0].image_id);//look at what other options for displaying photo, or append image//
-    look into - append image html tags. 
+    let imageId = artData[0].image_id;
+    $image.attr('src',`https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg/`);
     };
 
-function getImage(imageId) {
-        $.ajax(`${baseUrlImage}/${imageId}/full/843,/0/default.jpg`)
-        .then(function(picture) {console.log(picture)})
-        console.log("This works");
-    }
-    
 });
+
+// function getImage(imageId) {
+//         $.ajax(`${baseUrlImage}/${imageId}/full/843,/0/default.jpg`)
+//         .then(function(picture) {console.log(picture)})
+//         console.log("This works");
+//     }
+    
+
 
 /// you can write the funciton outsie but invoke it inside the function.
 
 // If the image is not in the public domain, pull the next one that is ??
 
-link source - do I use image tag or other
+// link source - do I use image tag or other
