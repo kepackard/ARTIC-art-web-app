@@ -24,8 +24,8 @@ _______________________
 
 #### **SCREENSHOTS**
 
-[Screenshot 3](SS3.png)
-[Screenshot 2](SS2.png)
+![Screenshot 3](SS3.png)
+![Screenshot 2](SS2.png)
 
 -----------------------
 
