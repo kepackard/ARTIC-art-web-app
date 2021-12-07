@@ -35,7 +35,7 @@ A user searches for any artist, title, or keyword in the search field.
 
 If more than one artwork is returned, only the first artwork is displayed.
 
-[Give it a try here!](https://relaxed-torvalds-66334f.netlify.app/?)
+[Give it a try here!](https://dataandstring.netlify.app/)
 
 -----------------------
 
